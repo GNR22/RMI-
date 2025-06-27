@@ -1,0 +1,44 @@
+<courses>
+    <course>
+        <course_id>C001</course_id>
+        <student_id>221-02475</student_id>
+        <course_title>Introduction to Programming</course_title>
+        <course_description>Basic programming concepts and logic.</course_description>
+    </course>
+    <course>
+        <course_id>C002</course_id>
+        <student_id>221-02476</student_id>
+        <course_title>Database Management</course_title>
+        <course_description>Structure Query Language.</course_description>
+    </course>
+    <course>
+        <course_id>C003</course_id>
+        <student_id>221-02477</student_id>
+        <course_title>Web Development</course_title>
+        <course_description>HTML, CSS, and JavaScript fundamentals.</course_description>
+    </course>
+    <course>
+        <course_id>C004</course_id>
+        <student_id>221-02478</student_id>
+        <course_title>Data Structures</course_title>
+        <course_description>Arrays, lists, stacks, and queues.</course_description>
+    </course>
+    <course>
+        <course_id>C005</course_id>
+        <student_id>221-02479</student_id>
+        <course_title>Operating Systems</course_title>
+        <course_description>Processes, memory, and file management.</course_description>
+    </course>
+    <course>
+        <course_id>C006</course_id>
+        <student_id>221-02480</student_id>
+        <course_title>Computer Networks</course_title>
+        <course_description>Network protocols and architectures.</course_description>
+    </course>
+    <course>
+        <course_id>C007</course_id>
+        <student_id>221-02481</student_id>
+        <course_title>Software Engineering</course_title>
+        <course_description>Software development life cycle and methodologies.</course_description>
+    </course>
+</courses>

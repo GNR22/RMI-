@@ -1,0 +1,10 @@
+If your having problems with your database. like the program saying Student table does not exist
+Do this below
+- Delete all the .class files in client and server folders
+- Start the server as you usually do 
+- Start the client
+This also helps REFRESH the project. 
+
+
+postgresql-42.7.5.jar file
+It is the PostgreSQL JDBC driver — a Java library that enables your Java applications to connect and interact with a PostgreSQL database.

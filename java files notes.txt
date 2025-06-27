@@ -1,0 +1,45 @@
+server folder
+
+-DBHelper.java
+/*Briefly:
+This class (DBHelper) handles all database operations for students and courses using JDBC with PostgreSQL. 
+It can:
+-Connect to the DB
+-Insert lists of students/courses (ignoring duplicates)
+-Fetch all students or courses
+-Uses List<Map<String, String>> to hold multiple records as key-value pairs. */
+
+RemoteService.java
+- Brief: This class defines a remote interface for RMI. It allows a client to send and 
+retrieve student and course data (as lists of maps) to/from a server remotely. */ 
+
+-RemoteServiceImpl.java
+ Brief: This class implements the remote methods declared in RemoteService. It delegates all
+database tasks (store/fetch students and courses) to the DBHelper class. */
+
+Server.java
+Brief expl: This class starts the RMI server. It creates an instance of the remote service, exports 
+it for remote access, registers it under "RemoteService" in the RMI registry on port 1099, and prints status messages. */
+
+
+client folder
+
+-Client.java 
+Briefly:
+This Client class connects to the RMI server, looks up the remote RemoteService, reads 
+student and course data from XML files, sends that data to the server, then retrieves and 
+prints the stored student and course data from the server.
+
+-RemoteService.java 
+Briefly:
+This interface (RemoteService) declares remote methods for clients to store and retrieve lists of students 
+and courses via RMI. It extends Remote and all methods can throw RemoteException.
+
+-XMLReader.java 
+Brief expl: This class (XMLReader) reads an XML file, parses its elements, and converts each XML record 
+(like a student or course) into a Map<String, String>. It returns a List of these maps representing all records
+from the XML.
+
+
+
+

@@ -1,0 +1,51 @@
+Syntax for database table creations (PGSQL)
+
+-- Table: public.students
+
+-- DROP TABLE IF EXISTS public.students;
+
+CREATE TABLE IF NOT EXISTS public.students
+(
+    id character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    name character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    age integer NOT NULL,
+    address character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    contact_number character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    created_at timestamp(0) without time zone,
+    updated_at timestamp(0) without time zone,
+    CONSTRAINT students_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.students
+    OWNER to postgres;
+
+
+
+
+
+
+-- Table: public.courses
+
+-- DROP TABLE IF EXISTS public.courses;
+
+CREATE TABLE IF NOT EXISTS public.courses
+(
+    course_id character varying COLLATE pg_catalog."default" NOT NULL DEFAULT nextval('courses_course_id_seq'::regclass),
+    student_id character varying COLLATE pg_catalog."default" NOT NULL,
+    course_title character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    course_description text COLLATE pg_catalog."default" NOT NULL,
+    created_at timestamp(0) without time zone,
+    updated_at timestamp(0) without time zone,
+    CONSTRAINT courses_pkey PRIMARY KEY (course_id),
+    CONSTRAINT courses_student_id_foreign FOREIGN KEY (student_id)
+        REFERENCES public.students (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.courses
+    OWNER to postgres;
