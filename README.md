@@ -1,2 +1,2 @@
 # RMI-
-Add students and courses and their information using RMI features
+Add students and courses and their information using JAVA RMI features
